@@ -1,0 +1,27 @@
+---
+title: "Enabling I2C Modules on RPi"
+author: "Zachary Johns"
+date: "4/17/2020"
+output: html_document
+---
+
+```{r}
+sudo raspi-config
+```
+
+```{r}
+sudo reboot
+```
+
+```{r}
+sudo apt update()
+sudo apt dist-upgrade
+sudo apt autoremove
+sudo apt clean
+```
+
+```{r}
+sudo apt install i2c-tools
+i2cdetect -y 1
+```
+
