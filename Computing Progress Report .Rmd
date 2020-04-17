@@ -19,3 +19,4 @@ Dr. Malmberg has already been a helpful resource in this project as well as the 
 
 Codes that have already been discovered/wrtiten will be posted in the repository with a brief discription as to what the code is saying. These codes are for the Raspberry Pi (i2c method). 
 
+I am currently looking at R files from class and looking at various examples online.
