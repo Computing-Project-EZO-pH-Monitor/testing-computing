@@ -13,9 +13,10 @@ Considering the heavy limitations we now have on our project due to the transiti
 
 If the UART method is decided to be used, we will communicate with the Python serial module since the UART behaves like a serial port.
 
-When a certain method has been established, most likely i2c, two members will focus on writing a code to generate a graph and the other two members will write a code to find the isoelectric point. At this point, these tasks seems suitable for two people to take on. However, if one tasks needs more assistance, the designated roles will be shifted to appropriatly assist as needed. 
+When a certain method has been established, most likely i2c, two members will focus on writing a code to generate a graph and the other two members will write a code to find the isoelectric point. At this point, these tasks seems suitable for two people to take on. However, if one tasks needs more assistance, the designated roles will be shifted to appropriatly assist as needed. Christian and Garrett have decided to work together on writing the code for the graph while Emma and Zach work together on writing the code for the isoelectric point.
 
 Dr. Malmberg has already been a helpful resource in this project as well as the EZO pH meter manual. 
 
 Codes that have already been discovered/wrtiten will be posted in the repository with a brief discription as to what the code is saying. These codes are for the Raspberry Pi (i2c method). 
 
+I am currently looking at R files from class and looking at various examples online. I would assume we could use a function similar to the ones shown in the Rintro document but retrieving the data and having it save to the global enviornment in real-time is somthing I'm not quite sure about yet

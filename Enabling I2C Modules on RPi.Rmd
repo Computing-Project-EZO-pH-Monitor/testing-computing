@@ -1,0 +1,29 @@
+---
+title: "Enabling I2C Modules on RPi"
+author: "Zachary Johns and Emma Berry"
+date: "4/17/2020"
+output: html_document
+---
+
+The following are codes we believe will be useful during the project if we choose to use the Raspberry Pi. These codes will allow us to download the necessary softwared and files for the Raspberry Pi in order to run the EZO in the i2c module.
+
+```{r}
+sudo raspi-config
+```
+
+```{r}
+sudo reboot
+```
+
+```{r}
+sudo apt update()
+sudo apt dist-upgrade
+sudo apt autoremove
+sudo apt clean
+```
+
+```{r}
+sudo apt install i2c-tools
+i2cdetect -y 1
+```
+
