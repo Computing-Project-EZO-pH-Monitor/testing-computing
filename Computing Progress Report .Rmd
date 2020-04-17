@@ -5,26 +5,17 @@ date: "4/15/2020"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+## Computing Progress Report
 
-## R Markdown
+Our group is using an EZO pH meter to detect the pH during two titrations between amino acids L-arginine and L-lysine. The EZO pH meter will be hooked up to a raspberry pi or directly to a laptop so the data points for the titration will be stored. The i2c method or UART will be used, respectively, if using the Raspberry pi or a computer.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Consdiering the heavy limitations we now have on our project, we are now solely focusing on the programming side of things and finding ways to write a program to help generate a titration curve and find an isoelectric point. With that being said, the designated tasks at the beginning of the semester have been modified. At this point in the progress of our project, all the memebrs are currently finding which programming method (i2c or UART) will be most doable. Currently, programming methods for the i2c has been most successful after reading through the EZO ph meter guide and discovering useful coding ideas. Furthermore, with each member having access to a Raspberry Pi, this programming method wouldnt change the difficulty of matters.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+If the UART method is decided to be used, we will communicate with the Python serial module since the UART behaves like a serial port.
 
-```{r cars}
-summary(cars)
-```
+When a certain method has been established, most likely i2c, two members will focus on writing a code to generate a graph and the other two members will write a code to find the isoelectric point. At this point, these tasks seems suitable for two people to take on. However, if one tasks needs more assistance, the designated roles will be shifted to appropriatly assist as needed. 
 
-## Including Plots
+Dr. Malmberg has already been a helpful resource in this project as well as the EZO pH meter manual. 
 
-You can also embed plots, for example:
+Codes that have already been discovered/wrtiten will be posted in the repository with a brief discription as to what the code is saying. These codes are for the Raspberry Pi (i2c method). 
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
