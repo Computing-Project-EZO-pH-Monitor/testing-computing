@@ -1,9 +1,11 @@
 ---
 title: "Importing Required Python Modules"
-author: "Zachary Johns"
+author: "Zachary Johns and Emma Berry"
 date: "4/17/2020"
 output: html_document
 ---
+
+These are some important python modules we believe will be necessary for the project in the Raspberry Pi with i2c.
 
 #!/usr/bin/env python
 
