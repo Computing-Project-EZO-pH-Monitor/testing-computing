@@ -1,6 +1,6 @@
 ---
 title: "Computing Progress Report"
-author: "Zachary Johns"
+author: "Zachary Johns, Emma Berry, Christian Wright, and Garrett Elmore"
 date: "4/15/2020"
 output: html_document
 ---
@@ -9,7 +9,7 @@ output: html_document
 
 Our group is using an EZO pH meter to detect the pH during two titrations between amino acids L-arginine and L-lysine. The EZO pH meter will be hooked up to a raspberry pi or directly to a laptop so the data points for the titration will be stored. The i2c method or UART will be used, respectively, if using the Raspberry pi or a computer.
 
-Consdiering the heavy limitations we now have on our project, we are now solely focusing on the programming side of things and finding ways to write a program to help generate a titration curve and find an isoelectric point. With that being said, the designated tasks at the beginning of the semester have been modified. At this point in the progress of our project, all the memebrs are currently finding which programming method (i2c or UART) will be most doable. Currently, programming methods for the i2c has been most successful after reading through the EZO ph meter guide and discovering useful coding ideas. Furthermore, with each member having access to a Raspberry Pi, this programming method wouldnt change the difficulty of matters.
+Considering the heavy limitations we now have on our project, we are now solely focusing on the programming side of things and finding ways to write a program to help generate a titration curve and find an isoelectric point. With that being said, the designated tasks at the beginning of the semester have been modified. At this point in the progress of our project, all the members are currently finding which programming method (i2c or UART) will be most doable. Currently, programming methods for the i2c has been most successful after reading through the EZO ph meter guide and discovering useful coding ideas. Furthermore, with each member having access to a Raspberry Pi, this programming method wouldnt change the difficulty of matters. We plan to make a decision within the next few days after some more research. The UART method would be more convenient becuase it could be run on the laptops, but as of right now, the resources we have found are pointing us in the opposite direction.
 
 If the UART method is decided to be used, we will communicate with the Python serial module since the UART behaves like a serial port.
 
