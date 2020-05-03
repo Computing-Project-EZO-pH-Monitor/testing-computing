@@ -1,6 +1,6 @@
 ---
 title: "Final Notebook"
-author: "Emma Berry"
+author: "Emma Berry, Zach John, Garett Elmore, and Christian Wright"
 date: "5/3/2020"
 output: html_document
 ---
