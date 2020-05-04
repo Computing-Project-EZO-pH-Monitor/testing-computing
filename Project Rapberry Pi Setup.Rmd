@@ -64,7 +64,7 @@ i2cdetect - y 1
 
 ```
 
-# Installing Required Python 
+# Installing Required Python Modules
 ```
 #!/usr/bin/env python
 
