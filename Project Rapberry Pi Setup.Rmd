@@ -1,0 +1,50 @@
+---
+title: "Setting Up the Raspberry Pi"
+author: "Emma Berry and Zachary Johns"
+date: "5/3/2020"
+output: html_document
+---
+
+# Enable I2C modules on the Raspberry Pi.
+
+```
+sudo raspi-config
+```
+
+# Select interfacing options, select I2C, and then reboot the Raspberry Pie. 
+
+```
+sudo reboot
+```
+
+# Open the terminal and install up-to-date Raspbian packages.
+
+```
+sudo apt
+sudo apt dist-upgrade
+sudo apt autoremove
+sudo apt clean
+```
+
+# Add Raspbian tools package
+
+```
+sudo apt install i2c-tools
+i2cdetect -y 1
+```
+
+# A chart/graph will be generated, indicating the I2C module is working correcrtly. 
+
+# Connect the pH sensor
+
+# Get the pH circuit into the correct mode. The pH circuit is in UART (serial) mode.
+
+# The breadbored will then be activated for the I2C modules.
+
+# The power is cut and the PGND pin was shorted to the TX pin.
+
+# The device is powered and the LED light changes from Green to Blue
+
+# The short was removed from the probe pin to the TX pin
+
+# The device was power cycled.
