@@ -55,6 +55,9 @@ TX(SDA)pin on the pH meter connects to GPIO pin 2 on the Raspberry Pi
 RX(SCL) on the pH connects to GPIO pin 3 on the Raspberry Pi.
 The PRB and PGND pins connect to the board and the shield pins of BNC.
 
+# Power
+Connect the Vcc pin to the +3.3 V pin in order to generate power.
+
 # Check to make sure the connection between the Raspberry Pi and pH meter is good.
 ```
 i2cdetect - y 1
@@ -63,6 +66,8 @@ i2cdetect - y 1
 
 # Installing Required Python 
 ```
+#!/usr/bin/env python
+
 import io
 import fctnl
 import time
