@@ -5,26 +5,26 @@ date: "5/3/2020"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+Emma's Part:
+# The pH meter and the Raspberry Pi are connected.
+The GND pin on the pH meter connects to the ground pin on the Raspberry Pi.
+TX(SDA)pin on the pH meter connects to GPIO pin 2 on the Raspberry Pi
+RX(SCL) on the pH connects to GPIO pin 3 on the Raspberry Pi.
+The PRB and PGND pins connect to the board and the shield pins of BNC.
+
+# Power
+Connect the Vcc pin to the +3.3 V pin in order to generate power.
+
+# Check to make sure the connection between the Raspberry Pi and pH meter is good.
+```
+i2cdetect - y 1
 ```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+# Installing Required Python Modules
 ```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+#!/usr/bin/env python
+import io
+import fctnl
+import time
+import string
 ```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
