@@ -48,3 +48,17 @@ i2cdetect -y 1
 # The short was removed from the probe pin to the TX pin
 
 # The device was power cycled.
+
+# The pH meter and the Raspberry Pi are connected.
+The GND pin on the pH meter connects to the ground pin on the Raspberry Pi.
+TX(SDA)pin on the pH meter connects to GPIO pin 2 on the Raspberry Pi
+RX(SCL) on the pH connects to GPIO pin 3 on the Raspberry Pi.
+The PRB and PGND pins connect to the board and the shield pins of BNC.
+
+# Installing Required Python 
+```
+import io
+import fctnl
+import time
+import string
+```
