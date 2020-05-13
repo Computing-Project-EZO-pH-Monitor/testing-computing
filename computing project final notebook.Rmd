@@ -8,7 +8,7 @@ output: html_document
 Emma's Part:
 # The pH meter and the Raspberry Pi are connected.
 The GND pin on the pH meter connects to the ground pin on the Raspberry Pi.
-TX(SDA)pin on the pH meter connects to GPIO pin 2 on the Raspberry Pi
+TX(SDA)pin on the pH meter connects to GPIO pin 2 on the Raspberry Pi. GPIO stands for general-purpose input/output pin.
 RX(SCL) on the pH connects to GPIO pin 3 on the Raspberry Pi.
 The PRB and PGND pins connect to the board and the shield pins of BNC.
 
@@ -23,10 +23,10 @@ i2cdetect - y 1
 # Installing Required Python Modules
 ```
 #!/usr/bin/env python
-import io
-import fctnl
-import time
-import string
+import io # this is used to create file streams
+import fctnl # this is used to access the I2C parameters like addresses
+import time # used for sleep delay and timestamps
+import string #  helps parse the strings
 ```
 
 Zach's Part:
