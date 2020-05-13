@@ -81,19 +81,24 @@ i2cdetect -y 1
 class atlas_i2c:
     long_timeout = 1.5  
     short_timeout = .5
+#Time needed to query readings
     default_bus = 1  
     default_address = 99
+#Defines the bus
     def __init__(self, address=default_address, bus=default_bus):
     self.file_read = io.open("/dev/i2c-" + str(bus), "rb", buffering=0)
         self.file_write = io.open("/dev/i2c-" + str(bus), "wb", buffering=0)
+#Allows the program to read and write binary
     self.set_i2c_address(address)
     def set_i2c_address(self, addr):
         I2C_SLAVE = 0x703
+#The PH meter must be the slave
         fcntl.ioctl(self.file_read, I2C_SLAVE, addr)
         fcntl.ioctl(self.file_write, I2C_SLAVE, addr)
     def write(self, string):string += ""           
     self.file_write.write(bytes(string, 'UTF-8'))
 def read(self, num_of_bytes=31):
+#Defines the size of data interpreted at one time
         res = self.file_read.read(num_of_bytes)  
         response = list([x for x in res])
         if response[0] == 1:char_list = [chr(x & ~0x80) for x in list(response[1:])]
@@ -104,6 +109,7 @@ def read(self, num_of_bytes=31):
         if((string.upper().startswith("R")) or
            (string.upper().startswith("CAL"))):
             time.sleep(self.long_timeout)
+ #Read and calibration commands need a longer timeout.
         elif((string.upper().startswith("SLEEP"))):
             return "sleep mode"
         else:
@@ -126,4 +132,4 @@ def main():
     print(" Pressing ctrl-c will stop the polling")
 ```
 #Allows Raspberry Pi to interface with the PH circuit.
-#Functions have been discussed in a previous video
+
