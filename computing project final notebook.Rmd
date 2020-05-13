@@ -21,12 +21,16 @@ i2cdetect - y 1
 ```
 
 # Installing Required Python Modules
+the first is used to create file streams
+the second is used to access the I2C parameters like addresses
+the third is used for sleep delay and timestamps
+the last one helps parse the strings
 ```
 #!/usr/bin/env python
-import io # this is used to create file streams
-import fctnl # this is used to access the I2C parameters like addresses
-import time # used for sleep delay and timestamps
-import string #  helps parse the strings
+import io
+import fctnl
+import time 
+import string  
 ```
 
 Zach's Part:
