@@ -28,6 +28,10 @@ import fctnl
 import time
 import string
 ```
+the first is used to create file streams
+the second is used to access the I2C parameters like addresses
+the third is used for sleep delay and timestamps
+the last one helps parse the strings
 
 Zach's Part:
 
