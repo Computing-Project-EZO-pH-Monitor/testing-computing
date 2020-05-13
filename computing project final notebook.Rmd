@@ -137,3 +137,51 @@ def main():
 ```
 #Allows Raspberry Pi to interface with the PH circuit.
 
+#Garrett's part
+
+   # the main loop
+```
+    while True:
+        myinput = input("Enter command: ")
+
+        # address command specifies where the Raspberry Pi will poll
+        if(myinput.upper().startswith("ADDRESS")):
+            addr = int(myinput.split(',')[1])
+            device.set_i2c_address(addr)
+            print("I2C address set to " + str(addr))
+
+        # contiuous polling command automatically polls the board
+        elif(myinput.upper().startswith("POLL")):
+            delaytime = float(myinput.split(',')[1])
+        # if polling time isnt long enough designate how long it needs to be    
+            if(delaytime < atlas_i2c.long_timeout):
+                print("Polling time is shorter than timeout, "
+                      "setting polling time to {}".
+                          format(atlas_i2c.long_timeout))
+                delaytime = atlas_i2c.long_timeout
+
+            # retrieve the info from the query that was set up and polled
+            info = device.query("I").split(",")[1]
+            print("Polling {} sensor every {} seconds, press"
+                  "ctrl-c to stop polling".
+                      format(info, delaytime))
+
+            try:
+                while True:
+                    print(device.query("R"))
+                    time.sleep(delaytime - 
+                    atlas_i2c.long_timeout)
+            except KeyboardInterrupt:
+            # recognizes the ctrl-c command designated earlier, which breaks the loop
+                print("Continuous polling stopped")
+       
+       # if unsuccessful the following command prints that the query failed
+        else:
+            try:
+                print(device.query(myinput))
+            except IOError:
+                print("Query failed")
+
+if __name__ == '__main__':
+    main()
+```
