@@ -114,8 +114,6 @@ def read(self, num_of_bytes=31):
         self.file_write.close()
 def main():
     device = atlas_i2c()  
-    # creates the I2C port object,specify the address or bus if
-    # necessary
     print(">> Atlas Scientific sample code")
     print(">> Any commands entered are passed to the board via" 
           "I2C except:")
